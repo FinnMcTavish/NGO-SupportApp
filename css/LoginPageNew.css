@@ -107,7 +107,7 @@ body {
     color: #555;
     margin-bottom: 0;
 }
-.signup-page-container .signup__container .form-control {
+.signup-page-container .signup__container .form-control {   
     background-color: transparent;
     border-top: 0;
     border-right: 0;
@@ -115,11 +115,15 @@ body {
     border-radius: 0;
     padding-left: 0;
 }
+/*Input Pink Lines */
 .signup-page-container .signup__container .form-control:active, .signup-page-container .signup__container .form-control:focus, .signup-page-container .signup__container .form-control:invalid {
     outline: none !important;
     box-shadow: none !important;
     border-color: #df6482;
+    width: 100%;
 }
+
+/*Register button*/
 .signup-page-container .signup__container .btn--form {
     padding: 0.5rem 2.5rem;
     font-size: 0.95rem;
@@ -127,12 +131,15 @@ body {
     text-transform: uppercase;
     color: #fff;
     background: #df6482;
+    
     border-radius: 2.1875rem;
     transition: all ease 0.5s;
     margin-bottom: 10px;
     margin-top: 15px;
     font-family: sans-serif;
+    border-color: #df6482;
 }
+/*Register button hover*/
 .signup-page-container .signup__container .btn--form:focus, .signup-page-container .signup__container .btn--form:hover {
     background: transparent;
     transition: all ease 0.5s;
@@ -141,12 +148,14 @@ body {
     outline: none;
     box-shadow: none;
 }
+/*I am already a memeber*/
 .signup-page-container .signup__container .signup__link {
     font-size: 0.8rem;
     font-weight: 600;
     text-decoration: underline;
     color: #999;
 }
+/*I am already a memeber hover*/
 .signup-page-container .signup__container .signup__link:focus, .signup-page-container .signup__container .signup__link:hover {
     color: #787878;
 }
