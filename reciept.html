@@ -36,7 +36,7 @@ border-bottom: 1px solid #EEE;
 #bot{ min-height: 50px;}
 
 #top .logo{
-//float: left;
+float: left;
 height: 60px;
 width: 60px;
 background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
@@ -52,7 +52,7 @@ border-radius: 50px;
 }
 .info{
 display: block;
-//float:left;
+float:left;
 margin-left: 0;
 }
 .title{
@@ -64,11 +64,11 @@ width: 100%;
 border-collapse: collapse;
 }
 td{
-//padding: 5px 0 5px 15px;
-//border: 1px solid #EEE
+padding: 5px 0 5px 15px;
+border: 1px solid #EEE
 }
 .tabletitle{
-//padding: 5px;
+padding: 5px;
 font-size: .5em;
 background: #EEE;
 }
@@ -95,7 +95,7 @@ margin-top: 5mm;
       <div class="info">
         <h2>Contact Info</h2>
         <p> 
-            Address : Shiv Nadar School, Noida</br>
+            Address : NGOsupport</br>
             Email   : ngosupport@gmail.com</br>
             Phone   : +917982084099</br>
         </p>
@@ -165,7 +165,7 @@ margin-top: 5mm;
 
 				</div><!--End InvoiceBot-->
   </div><!--End Invoice-->
-<style>
+<script>
     function PrintElem() 
 {
     Popup($html);
@@ -175,7 +175,7 @@ function Popup(data)
 {
     var myWindow = window.open('', 'Receipt', 'height=400,width=600');
     myWindow.document.write('<html><head><title>Receipt</title>');
-    /*optional stylesheet*/ //myWindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+    myWindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
     myWindow.document.write('<style type="text/css"> *, html {margin:0;padding:0;} </style>');
     myWindow.document.write('</head><body>');
     myWindow.document.write(data);
@@ -189,6 +189,6 @@ function Popup(data)
         myWindow.close();
     };
 }
-</style>
+</script>
 </body>
 </html>
