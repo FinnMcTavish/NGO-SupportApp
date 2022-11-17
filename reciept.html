@@ -1,0 +1,143 @@
+<html>
+<head>
+<style>
+
+</style>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="css/style2.css">
+
+<title>Reciept</title>
+</head>
+<body>
+<div id="invoice-POS">
+    
+    <center id="top">
+      <div class="logo"></div>
+      <div class="info"> 
+        <h2>NGO Support</h2>
+      </div><!--End Info-->
+    </center><!--End InvoiceTop-->
+    
+    <div id="mid">
+      <div class="info">
+        <h2>Contact Info</h2>
+        <p> 
+            Address : Shiv Nadar School, Noida</br>
+            Email   : ngosupport@gmail.com</br>
+            Phone   : +917982084099</br>
+        </p>
+      </div>
+    </div><!--End Invoice Mid-->
+    
+    <div id="bot">
+
+					<div id="table">
+						<table>
+							<tr class="tabletitle">
+								<td class="item"><h2>Item</h2></td>
+								<td class="Hours"><h2>Qty</h2></td>
+								<td class="Rate"><h2>Sub Total</h2></td>
+							</tr>
+
+							<tr class="service">
+								<td class="tableitem">Clothes</td>
+								<td class="tableitem"></td>
+								<td class="tableitem"></td>
+							</tr>
+
+							<tr class="service">
+								<td class="tableitem">Money</td>
+								<td class="tableitem">NA</td>
+								<td class="tableitem"></td>
+							</tr>
+
+              <tr class="service">
+								<td class="tableitem">Utilities</td>
+								<td class="tableitem"></td>
+								<td class="tableitem"></td>
+							</tr>
+
+
+
+							<tr class="tabletitle">
+								<td></td>
+								<td class="Rate"><h2>tax</h2></td>
+								<td class="payment"><h2>$419.25</h2></td>
+							</tr>
+
+							<tr class="tabletitle">
+								<td></td>
+								<td class="Rate"><h2>Total</h2></td>
+								<td class="payment"><h2>$3,644.25</h2></td>
+							</tr>
+
+						</table>
+					</div><!--End Table-->
+
+					<div id="legalcopy">
+						<p class="legal"><strong>Thank you for your kindness!</strong> 
+						</p>
+					</div>
+
+				</div><!--End InvoiceBot-->
+  </div><!--End Invoice-->
+
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home</a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+       </li>
+    </ul>
+ </div>
+<script>
+    function PrintElem() 
+{
+    Popup($html);
+}
+
+function Popup(data) 
+{
+    var myWindow = window.open('', 'Receipt', 'height=400,width=600');
+    myWindow.document.write('<html><head><title>Receipt</title>');
+    /*optional stylesheet*/ //myWindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+    myWindow.document.write('<style type="text/css"> *, html {margin:0;padding:0;} </style>');
+    myWindow.document.write('</head><body>');
+    myWindow.document.write(data);
+    myWindow.document.write('</body></html>');
+    myWindow.document.close(); // necessary for IE >= 10
+
+    myWindow.onload=function(){ // necessary if the div contain images
+
+        myWindow.focus(); // necessary for IE >= 10
+        myWindow.print();
+        myWindow.close();
+    };
+}
+</script>
+<script>
+	window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+    	for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    		}
+    document.getElementById('cash').innerHTML = data.name;
+}
+
+</script>
+</body>
+</html>
